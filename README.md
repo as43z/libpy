@@ -15,3 +15,9 @@ More to come.
 ## How to use?
 
 Refer to each module to understand how to use it.  
+
+## TODO
+
+- [ ] Tokenizer: `tokenize` does not provide full support on recognizing _punctuation_ symbols next to ascii chains.
+
+
