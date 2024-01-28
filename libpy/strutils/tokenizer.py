@@ -39,10 +39,10 @@ def tokenize(seq: str) ->Generator[Token, None, None]:
     for i, ch in enumerate(seq):
         if ch.isspace(): continue
         elif ch in string.punctuation: yield Token(ch, (i, i))
-        elif ch in string.ascii_letters:
+        elif ch in string.ascii_letters or ch in string.digits:
             if tmp.cursor_range == (0, 0): tmp.cursor_range = (i, 0)
             tmp.value += ch
-            if i < n-1 and not seq[i+1].isspace():
+            if i < n-1 and not seq[i+1].isspace() and not seq[i+1] in string.punctuation:
                 continue
             tmp.cursor_range = (tmp.cursor_range[0], i)
             tk = tmp
