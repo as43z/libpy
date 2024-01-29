@@ -5,7 +5,8 @@ setup(name='libpy',
     description='Custom python codebase and utils',
     packages=find_packages(),
     install_requires=[
-        'typing'
+        'typing',
+        'numpy'
     ],
     license='MIT',
     python_requires='>=3.12.0',
