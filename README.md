@@ -9,15 +9,19 @@ missuse of this code.
 
 - `strutils` is utility code for string related utility. It comes with a 
     tokenizer.
+- `ds` is utility code for generating data structures. It comes with a tree
+module.
 
 More to come.
 
 ## How to use?
 
-Refer to each module to understand how to use it.  
+Refer to each module to understand how to use it. Consult the [docs](docs/)
 
 ## TODO
 
-- [ ] Tokenizer: `tokenize` does not provide full support on recognizing _punctuation_ symbols next to ascii chains.
+- [ ] Better GTNode representation. Should return a string containing the node
+minimum representation: the hash, the parent's hash and the hashes of the
+children nodes.
 
 

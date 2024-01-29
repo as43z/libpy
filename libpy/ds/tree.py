@@ -14,6 +14,19 @@ class GTNode:
         self.children = []
         self.hash = hash(self)
 
+    def __repr__(self):
+        raise Exception("Error: Not implemented %s" % self.__name__) 
+
+    """
+    Wraps the repr_gt_node() function into the node.
+
+    span: bool -- Represent the children of the node.
+    indent_level: int -- Level of indentation for the dump cycle.
+    """
+    def print(self, span: bool = True, indent_level: int = 0):
+        repr_gt_node(self, indent_level, span)
+
+
 
 """
 Indicates how the tabs or the space between the nodes should be represented.
