@@ -2,6 +2,10 @@
 
 This is the documentation for the `libpy` codebase.
 
+## `array`
+
+TODO
+
 ## `ds`
 
 `ds` provides some datastructures right available to use.
