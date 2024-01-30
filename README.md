@@ -31,3 +31,5 @@ is incredible simple at the moment. Quite stupid to be fair.
 - [ ] LazyBuffer compatible with Numpy or any type of Iterable that can be used
 i operations such as `__add__`, `__sub__`, ... .
 
+- [ ] `tokenize()` should have `tokenize_iter()` for the generator and another
+function `tokenizer()` who returns the list itself.
