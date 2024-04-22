@@ -48,7 +48,7 @@ def repr_gt_node(node: GTNode, indent_level: int = 0, span: bool = True):
         {
             "tab": TAB_REPR*indent_level,
             "hash": str(node.hash),
-            "phash": str(node.parent.hash) if node.parent != None else "None",
+            "phash": str(node.parent.hash) if node.parent is not None else "None",
             "tabi": TAB_REPR*(next_indent_level)
         })
 
@@ -64,7 +64,6 @@ def repr_gt_node(node: GTNode, indent_level: int = 0, span: bool = True):
                     "hash": str(child.hash)
                 }
             )
-
 
     print("%s ]" % (TAB_REPR*(next_indent_level)))
     print("%s ]" % (TAB_REPR*(indent_level)))
