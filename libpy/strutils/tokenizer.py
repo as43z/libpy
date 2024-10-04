@@ -27,7 +27,7 @@ class Token:
     value: str = ''
     cursor_range: tuple[int, int] = (0, 0) 
 
-def tokenize(seq: str) ->Generator[Token, None, None]:
+def tokenize_iter(seq: str) ->Generator[Token, None, None]:
     """
     Returns a generator of tokens that have been retrieved from the input sequence.
     
@@ -50,3 +50,16 @@ def tokenize(seq: str) ->Generator[Token, None, None]:
             yield tk
         else: yield Token()
 
+def tokenize(seq: str) -> list[Token]:
+    """
+    Returns a list of tokens from an input string.
+    
+    seq: str -- The input sequence of characters
+    """
+    tokens = []
+    for token in tokenize_iter(seq):
+        tokens.append(token)
+
+    return tokens
+   
+    

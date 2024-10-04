@@ -15,7 +15,7 @@ class GTNode:
         self.hash = hash(self)
 
     def __repr__(self):
-        raise Exception("Error: Not implemented %s" % self.__name__) 
+        raise Exception("Error: Not implemented %s. Use repr_gt_node() function." % self.__name__) 
 
     """
     Wraps the repr_gt_node() function into the node.
