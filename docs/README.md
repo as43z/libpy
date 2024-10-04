@@ -13,6 +13,7 @@ TODO
 What is inside `ds`?
 
 * `tree`: A module that has tools and classes for creating trees.
+* `result`: A Rust-ish Result Ok Error unpack Functional programming.
 
 ### Tree
 
