@@ -55,12 +55,12 @@ def mult(x):
     if not getattr(x, '__iter__'):
         raise Exception("Received %s not an Iterator." % type(x).__name__)
 
-    y = 1
+    y = int(1)
     for el in x:
-        if isinstance(el, numbers.Number):
+        if isinstance(el, numbers.Real):
             # For some reason my pyright is complaining about this line below.
             # I don't understand why. Typing is hard I guess.
-            y *= el
+            y = y * el
         else:
             raise Exception(f'{type(el)} is not of type {numbers.Number}')
     return y

@@ -1,0 +1,6 @@
+{
+  "python.languageServer": "Pylance",
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.typeCheckingMode": "standard",
+  "flake8.cwd": "${workspaceFolder}"
+}

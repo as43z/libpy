@@ -1,5 +1,5 @@
 from libpy.ds.result import T, Result, Ok, Error
-from typing import Callable
+from typing import Callable, Any
 
 def perform_op(op: Callable[[T, T], Result[T]], *args) -> Result[T]:
     if len(args) < 2:
@@ -17,7 +17,7 @@ def perform_op(op: Callable[[T, T], Result[T]], *args) -> Result[T]:
 def add (a: int, b: int) -> Result[int]:
     return Ok(a + b)
 
-def pipeline(a: T, *funcs: Callable[[str], Result[T]]) -> Result[T]:
+def pipeline(a: T, *funcs: Callable[[Any], Result[T]]) -> Result[T]:
     if len(funcs) < 1:
         return Error("pipeline requires more than one function.")
     

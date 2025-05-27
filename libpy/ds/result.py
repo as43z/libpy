@@ -8,7 +8,7 @@ from typing import (
     runtime_checkable
 )
 
-T = TypeVar("T", covariant=True)
+from libpy.generics import T
 
 @runtime_checkable
 class Unwrappable(Protocol[T]):
@@ -22,7 +22,8 @@ class Unwrappable(Protocol[T]):
 class Error(Unwrappable):
     """
     Represents an error in the execution of a program.
-    :params: args - Variadic arguments for printing during raise.
+
+    :params args: Variadic arguments for printing during raise.
     """
     def __init__(self, *args):
         self.container = args
@@ -36,7 +37,8 @@ class Error(Unwrappable):
 class Ok(Unwrappable, Generic[T]):
     """
     Represents an error in the execution of a program.
-    :params: args - Variadic arguments that are part of the executable pipeline.
+
+    :params args : Variadic arguments that are part of the executable pipeline.
     """
     def __init__(self, *args):
         super().__init__()

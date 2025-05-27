@@ -1,0 +1,24 @@
+[flake8]
+# Set max line length
+max-line-length = 88
+
+# Ignore specific rules (you can customize this)
+extend-ignore =
+    E203,  # whitespace before ':', conflicts with Black
+    W503   # line break before binary operator, conflicts with Black
+
+# Show line numbers and source code
+show-source = true
+
+# Exclude directories
+exclude =
+    .git,
+    __pycache__,
+    build,
+    dist,
+    .venv,
+    venv
+
+# Enable specific checks or plugins (if installed)
+# e.g., flake8-bugbear, flake8-comprehensions
+select = C,E,F,W,B,B9

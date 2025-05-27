@@ -8,14 +8,14 @@ parent: GTNode -- GenericTree node. If this is None, then it means it is the roo
 children: list[GTNode] -- List of the Generic Tree node childrens.
 hash: int -- Hash of the GTNode (used as ID perhaps).
 """
-class GTNode:
+class GTNode(object):
     def __init__(self, parent: GTNode | None = None):
         self.parent = parent
         self.children = []
         self.hash = hash(self)
 
     def __repr__(self):
-        raise Exception("Error: Not implemented %s. Use repr_gt_node() function." % self.__name__) 
+        raise Exception("Error: Not implemented %s. Use repr_gt_node() function." % self.__class__.__name__) 
 
     """
     Wraps the repr_gt_node() function into the node.
